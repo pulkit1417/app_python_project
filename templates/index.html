@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Tracking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Library Tracking System</h1>
+        <form action="/add" method="POST">
+            <input type="text" name="title" placeholder="Book Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="category" placeholder="Category" required>
+            <input type="number" name="rating" placeholder="Rating (0-5)" min="0" max="5">
+            <button type="submit">Add Book</button>
+        </form>
+        <form action="/" method="GET">
+            <input type="text" name="search" placeholder="Search books" value="{{ search_query }}">
+            <button type="submit">Search</button>
+        </form>
+        <form action="/" method="GET">
+            <select name="sort" onchange="this.form.submit()">
+                <option value="title">Sort by Title</option>
+                <option value="author">Sort by Author</option>
+            </select>
+        </form>
+        <ul>
+            {% for book in books %}
+                <li>
+                    <a href="/details/{{ loop.index0 }}">{{ book.title }}</a> by {{ book.author }} ({{ book.category }}, Rating: {{ book.rating }})
+                    <a href="/edit/{{ loop.index0 }}">Edit</a>
+                    <form action="/delete/{{ loop.index0 }}" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
