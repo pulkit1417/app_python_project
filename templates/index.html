@@ -30,7 +30,7 @@
         <ul>
             {% for book in books %}
                 <li>
-                    <a href="/details/{{ loop.index0 }}">{{ book.title }}</a> by {{ book.author }} ({{ book.category }}, Rating: {{ book.rating }})
+                    <a href="/details/{{ loop.index0 }}">{{ book.title }}</a> &nbsp; by {{ book.author }} ({{ book.category }}, Rating: {{ book.rating }}) &nbsp;
                     <a href="/edit/{{ loop.index0 }}">Edit</a>
                     <form action="/delete/{{ loop.index0 }}" method="POST" style="display:inline;">
                         <button type="submit">Delete</button>

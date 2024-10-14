@@ -1,0 +1,12 @@
+[
+    {"title": "To Kill a Mockingbird", "author": "Harper Lee", "category": "Fiction", "rating": "5"},
+    {"title": "1984", "author": "George Orwell", "category": "Dystopian", "rating": "4.5"},
+    {"title": "Pride and Prejudice", "author": "Jane Austen", "category": "Classic", "rating": "4.7"},
+    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "category": "Classic", "rating": "4.2"},
+    {"title": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "category": "Fantasy", "rating": "5"},
+    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "category": "Fantasy", "rating": "4.8"},
+    {"title": "The Catcher in the Rye", "author": "J.D. Salinger", "category": "Fiction", "rating": "4"},
+    {"title": "The Alchemist", "author": "Paulo Coelho", "category": "Fiction", "rating": "4.3"},
+    {"title": "The Chronicles of Narnia", "author": "C.S. Lewis", "category": "Fantasy", "rating": "4.6"},
+    {"title": "Brave New World", "author": "Aldous Huxley", "category": "Dystopian", "rating": "4.4"}
+]

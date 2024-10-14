@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,17 +32,20 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    max-width: 600px; /* Limits the form width */
+    margin: 0 auto; /* Centers the form */
 }
 
 input[type="text"],
 input[type="number"],
 select {
-    padding: 15px;
-    margin: 10px 0;
+    padding: 10px; /* Reduced padding */
+    margin: 8px 0; /* Smaller margins */
     border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 1em;
@@ -55,7 +59,7 @@ input:focus {
 }
 
 button {
-    padding: 15px;
+    padding: 10px; /* Reduced padding */
     border: none;
     background: linear-gradient(135deg, #007bff, #00c4ff);
     color: white;
@@ -63,12 +67,14 @@ button {
     font-size: 1em;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: 10px; /* Add space between fields and button */
 }
 
 button:hover {
     background: linear-gradient(135deg, #0056b3, #00aaff);
 }
 
+/* List and Links */
 ul {
     list-style-type: none;
     padding: 0;
