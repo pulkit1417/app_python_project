@@ -60,7 +60,7 @@ def edit_book(book_id):
         book['rating'] = request.form.get('rating', 0)
         save_data(library)
         return redirect(url_for('index'))
-    return render_template('edit.html', book=book)
+    return render_template('edit.html', book=book) 
 
 @app.route('/details/<int:book_id>')
 def book_details(book_id):

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Tracking System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -17,12 +17,13 @@
             <input type="number" name="rating" placeholder="Rating (0-5)" min="0" max="5">
             <button type="submit">Add Book</button>
         </form>
-        <form action="/" method="GET">
-            <input type="text" name="search" placeholder="Search books" value="{{ search_query }}">
-            <button type="submit">Search</button>
+        <form action="/" method="GET" >
+        <form action="/" method="GET" >
+            <input type="text" name="search" placeholder="Search books" value="{{ search_query }}" style="margin-top: 10px;">
+            <button type="submit" style="margin-top: -9px;">Search</button>
         </form>
         <form action="/" method="GET">
-            <select name="sort" onchange="this.form.submit()">
+            <select name="sort" onchange="this.form.submit()" style="margin-top: 18px;">
                 <option value="title">Sort by Title</option>
                 <option value="author">Sort by Author</option>
             </select>
